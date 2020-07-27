@@ -1,9 +1,8 @@
 # Docker
 
-To follow this tutorial you need to have the Docker Engine installed. You can download it and install it from [here](https://docs.docker.com/engine/install/).
+Slides [Docker and containers for Data Science](https://docs.google.com/presentation/d/1CeyQzwyLR9j-0bLmonuOgYLwQ4ky7UhLsmz8w_XaGwM/edit?usp=sharing) or in [PDF](Docker%20and%20containers%20for%20Data%20Science.pdf).
 
-* Get or build images
-* Run images on containers
+To follow this tutorial you need to have the Docker Engine installed. You can download it and install it from [here](https://docs.docker.com/engine/install/).
 
 ## Docker `images`
 
