@@ -100,6 +100,12 @@ docker stop dsd-mysql-demo
 docker restart dsd-mysql-demo
 ```
 
+To check container details such as IP or volumes we use `inspect`.
+
+```
+docker inspect dsd-mysql-demo
+```
+
 To remote a container, the container has to be stopped.
 
 ```
@@ -110,7 +116,7 @@ docker rm $(docker stop dsd-mysql-demo)
 
 ### Data volumes
 
-
+For persistent storage one can use [volumes](https://docs.docker.com/storage/).
 
 ```
 docker run \
