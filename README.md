@@ -38,7 +38,7 @@ The image will be based on the python:3.7 image and then it will install vim in 
 To create the image from the Dockerfile run the following command.
 
 ```
-docker build -t dsd/python3_demo:1.0 .
+docker build -t sds/python3_demo:1.0 .
 ```
 
 ### Listing images 
@@ -61,23 +61,23 @@ Docker has many options to run containers.
 $ docker run hello-world
 
 # MySQL example
-$ docker run --name dsd-mysql-demo \
+$ docker run --name sds-mysql-demo \
     -p 6603:3306 \
     --rm \
     -e MYSQL_USER=demo \
     -e MYSQL_PASSWORD=demo \
     -e MYSQL_ROOT_PASSWORD=rootpassword \
-    -e MYSQL_DATABASE=dsd_demo \
+    -e MYSQL_DATABASE=sds_demo \
     -d \
     mysql:8.0
 
 # Postgres example
-$ docker run --name dsd-postgres-demo \
+$ docker run --name sds-postgres-demo \
     -p 6604:5432 \
     --rm \
     -e POSTGRES_PASSWORD=demo \
     -e POSTGRES_USER=demo \
-    -e POSTGRES_DB=dsd_demo \
+    -e POSTGRES_DB=sds_demo \
     -d \
     postgres:10.4
 ```
@@ -95,23 +95,23 @@ docker ps -as
 
 To `stop`, `start` or `restart` containers you can use them as commands.
 ```
-docker start dsd-mysql-demo
-docker stop dsd-mysql-demo
-docker restart dsd-mysql-demo
+docker start sds-mysql-demo
+docker stop sds-mysql-demo
+docker restart sds-mysql-demo
 ```
 
 To check container details such as IP or volumes we use `inspect`.
 
 ```
-docker inspect dsd-mysql-demo
+docker inspect sds-mysql-demo
 ```
 
 To remote a container, the container has to be stopped.
 
 ```
-docker rm dsd-mysql-demo
+docker rm sds-mysql-demo
 # or the following if the container is running
-docker rm $(docker stop dsd-mysql-demo)
+docker rm $(docker stop sds-mysql-demo)
 ```
 
 ### Data volumes
@@ -120,18 +120,18 @@ For persistent storage one can use [volumes](https://docs.docker.com/storage/).
 
 ```
 docker run \
-    --name dsd-demo \
-    -h dsd-demo \
+    --name sds-demo \
+    -h sds-demo \
     -it \
     -v "$(pwd)"/data:/tmp \
     -d \
-    dsd/python3_demo:1.0
+    sds/python3_demo:1.0
 ```
 
 To access into a container.
 
 ```
-docker exec -it dsd-demo bash
+docker exec -it sds-demo bash
 ```
 
 Copy data from and to a container.

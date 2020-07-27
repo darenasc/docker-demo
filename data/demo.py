@@ -1,4 +1,4 @@
-import pandas as pd
+#import pandas as pd
 
 with open('data_sample.txt', 'r') as f:
     data = f.read()
